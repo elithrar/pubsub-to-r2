@@ -1,0 +1,35 @@
+name = "pubsub-to-r2"
+account_id = "d458dbe698b8eef41837f941d73bc5b3"
+
+compatibility_flags = []
+workers_dev = true
+compatibility_date = "2022-06-09"
+
+main = "src/index.ts"
+
+# https://developers.cloudflare.com/r2/get-started/
+[[r2_buckets]]
+binding = "TRASHCAN" # accessed via env.SINK
+bucket_name = "trashcan" # the name of an R2 bucket in your account
+
+[vars]
+BROKER_PUBLIC_KEYS = '''{
+  "keys": [
+    {
+      "use": "sig",
+      "kty": "OKP",
+      "kid": "JDPuYJqHOvqzlakkNFQ9kfN7WsYs5uHndp_ziRdmOCU",
+      "crv": "Ed25519",
+      "alg": "EdDSA",
+      "x": "Phf82R8tG1FdY475-AgtlaWIwH1lLFlfWu5LrsKhyjw"
+    },
+    {
+      "use": "sig",
+      "kty": "OKP",
+      "kid": "qk7Z4hbN738v-m2CKdVaKTav9pU32MAaQXB2tDaQ-_o",
+      "crv": "Ed25519",
+      "alg": "EdDSA",
+      "x": "Bt4kQWcK_XhZP1ZxEflsoYbqaBm9rEDk_jNWPdhxwTI"
+    }
+  ]
+}'''

@@ -1,0 +1,16 @@
+{
+  "name": "pubsub-to-r2",
+  "version": "0.0.1",
+  "description": "Write Pub/Sub messages to R2 storage",
+  "scripts": {
+    "tail": "npx wrangler tail --format=pretty",
+    "publish": "npx wrangler publish"
+  },
+  "author": "Matt Silverlock, Cloudflare",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@cloudflare/pubsub": "^0.0.1",
+    "@cloudflare/workers-types": "^3.11.0",
+    "ulid": "^2.3.0"
+  }
+}
