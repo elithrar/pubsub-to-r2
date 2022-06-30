@@ -11,6 +11,7 @@ main = "src/index.ts"
 [[r2_buckets]]
 binding = "TRASHCAN" # accessed via env.SINK
 bucket_name = "trashcan" # the name of an R2 bucket in your account
+preview_bucket_name = "trashcan" # Normally, this should be a different bucket so that prod & dev are not mixed.
 
 [vars]
 BROKER_PUBLIC_KEYS = '''{
